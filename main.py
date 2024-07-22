@@ -13,7 +13,7 @@ from aiogram.filters import Command
 
 from datetime import datetime, timedelta
 
-
+from core.handlers.basic import get_start, get_hello
 from core.settings import settings
 # from core.handlers.basic import get_start
 from core.utils.commands import set_commands
@@ -37,6 +37,8 @@ async def stop_bot():
     await bot.send_message(settings.bots.admin_id, text='Бот остановлен!')
 
 
+
+
 async def begin():
     # TODO: Register all functions
 
@@ -52,11 +54,11 @@ async def begin():
     scheduler.start()
 
 
-    dp.update.middleware.register(SchedulerMiddleware(scheduler))
+    # dp.update.middleware.register(SchedulerMiddleware(scheduler))
 
 
     dp.message.register(get_start, Command('start'))
-
+    dp.message.register(get_hello, F.text == 'Привет')
 
 
     try:
