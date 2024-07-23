@@ -7,7 +7,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 
-API_TOKEN = '6569216429:AAFi-u_8GWjdJNoPpZVRiNe3M8o-rfUnXFI'
+API_TOKEN = ''
 
 logging.basicConfig(level=logging.INFO)
 
