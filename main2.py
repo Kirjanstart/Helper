@@ -13,7 +13,7 @@ import certifi
 
 
 
-API_TOKEN = '6569216429:AAFi-u_8GWjdJNoPpZVRiNe3M8o-rfUnXFI'
+API_TOKEN = ''
 
 logging.basicConfig(level=logging.INFO)
 
